@@ -1,0 +1,113 @@
+.video{
+    position: fixed;
+    top:0;
+    left:0;
+    width: 100vw;
+    height: 100vh;
+    object-fit: cover;
+    z-index: -5;
+}
+fieldset{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 35rem;
+    margin-top: 3rem;
+    margin-right: auto;
+    margin-left: auto;
+    padding: 2rem;
+    background-color: rgba(0, 0, 0, 0.907);
+    border-radius: 10px;
+    box-shadow: 0px 4px 25px 2px #E83F25;
+    border: none;
+    gap:2.5rem;
+    animation: anim 3s ease infinite;
+    padding-bottom: 4rem;
+}
+h1{
+    color:#E83F25;
+    font-size: 2.5rem;
+    font-family:Arial, Helvetica, sans-serif;
+}
+.input{
+    padding: 1rem;
+    font-size: 1rem;
+    width: 22rem;
+    background-color: rgba(255, 255, 255, 0);
+    color: white;
+    font-weight: 600;
+    border: none;
+    border-bottom: 2px solid white;
+}
+.input:focus{
+    outline: none;
+    border-bottom: 2px solid #EA7300;
+}
+.sub{
+    align-self: flex-start;
+    margin-left: 6.2rem;
+    padding:0.8rem 1rem 0.8rem 1rem;
+    width: 9rem;
+    border: 2px solid #EA7300;
+    color: #EA7300;
+    background-color:#ea710000;
+    font-size: 1rem;
+    font-weight: 600;
+    border-radius:5px;
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+body{
+    font-family:Arial, Helvetica, sans-serif;
+}
+.sub:hover{
+
+    background-color: #EA7300;
+    color: white;
+    box-shadow: 0px 4px 40px #ea7100;
+}
+@keyframes anim {
+    50%{
+        box-shadow: 0px 4px 25px 5px #EA7300;        
+    }
+    100%{
+        box-shadow: 0px 4px 25px 2px #E83F25;
+    }
+    
+}
+.div1{
+    display: flex;
+    flex-direction: row;
+    gap: 8rem;
+    margin-top: 0.8rem;
+}
+.div1 label{
+    color: white;
+    cursor: pointer;
+}
+.div1 a{
+    text-decoration: none;
+    color: white;
+}
+.div1 a:hover{
+    color: #EA7300;
+}
+.create{
+    display: flex;
+    gap:0.3rem;
+    margin-top: 1.5rem;
+}
+.create span{
+    color: #E83F25;
+}
+.create a{
+    text-decoration: none;
+    color: white;
+}
+.create a:hover{
+    color: #EA7300;
+}
+.input::placeholder{
+    color: white;
+}
+         
