@@ -1,0 +1,25 @@
+img{
+    width: 18rem;
+}
+.main{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+h3{
+    font-size: 2rem;
+    color: red;
+}
+p{
+    font-size: 1.25rem;
+    color: black;
+}
+.testi{
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 0;
+    left: 0;
+}

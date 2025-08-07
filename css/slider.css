@@ -1,0 +1,40 @@
+body{
+    font-family:Arial, Helvetica, sans-serif
+}
+img{
+    width: 9rem;
+    height: 9rem;
+    border-radius: 50%;
+    object-fit: cover;
+    position: absolute;
+    left: 17rem;
+    top:-4.5rem;
+}
+.container{
+    /*border: 1px solid black;*/
+    width: 40rem;
+    max-height: 12rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding:8rem 3rem 4rem 3rem;
+    margin-right: auto;
+    margin-left: auto;
+    margin-top: 10rem;
+    background: linear-gradient(45deg,#4D55CC,#7A73D1);
+    border-radius: 15px;
+    color: white;
+    position: relative;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.466);
+    cursor: pointer;
+}
+.text{
+    font-size: 1.5rem;
+    font-weight: 500;
+    line-height: 2rem;
+}
+.name{
+    font-size: 1.5rem;
+    font-weight: 500;
+    padding-top: 3rem;
+}

@@ -1,0 +1,55 @@
+h1{
+    font-size:30px;
+    color:darkgoldenrod;
+}
+img{
+    border-radius:5px;
+}
+ul li{
+    color: green;
+    
+}
+ul{
+    font-size:15px;
+
+}
+
+fieldset{
+    width:30%;
+    padding:20px;
+    border-radius:10px;
+}
+legend{
+    font-size:20px;
+}
+.txt{
+    width:300px;
+    height: 40px;
+    padding-left:15px;
+    border-radius:10px;
+    border:black solid 1px;
+}
+.submit{
+    padding-left:50px;
+    padding-right:50px;
+    padding-top:10px;
+    padding-bottom:10px;
+    margin-left:15px;
+    border-radius:10px;
+    border:none;
+    font-size:15px;
+    color:white;
+    background:linear-gradient(#4E71FF,#8DD8FF);
+    transition: all 0.5s;
+}
+.submit:hover{
+    background-color: red;
+    transform: translate(5px,0);
+}
+a{
+    text-decoration: none;
+}
+ol li{
+    font-size:15px;
+    color:red;
+}

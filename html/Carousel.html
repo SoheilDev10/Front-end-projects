@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carousel</title>
+    <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/3.0.0/uicons-regular-rounded/css/uicons-regular-rounded.css'>
+    <style>
+        #products{
+            display: flex;
+            padding: 0 100px;
+            width: 100%;
+            margin-top: 300px;
+        }
+        .carousel{
+            display: flex;
+            gap: 1.5rem;
+            overflow-x: auto;
+            scroll-behavior: smooth;
+            max-width: 1232px;
+            /*border: 1px solid black;*/
+            padding: 1rem;
+            scrollbar-width: none;
+        }
+        
+    .product-card {
+      flex: 0 0 250px;
+      background: white;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+      padding: 16px;
+      width: 240px;
+      text-align: center;
+      scroll-snap-align: start;
+      cursor: pointer;
+    }
+    .arrow1{
+        align-self: center;
+        font-size: 2rem;
+        color: black;
+        cursor: pointer;
+    }
+
+    .product-card img {
+      max-width: 100%;
+      height: 180px;
+      object-fit: contain;
+    }
+
+    .product-title {
+      font-weight: bold;
+      margin: 12px 0 4px;
+    }
+
+    .product-price {
+      color: #555;
+      margin-bottom: 12px;
+    }
+
+    .add-btn {
+      background: black;
+      color: white;
+      padding: 10px 16px;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: background 0.3s;
+    }
+
+    .add-btn:hover {
+      background: #333;
+    }
+    </style>
+</head>
+<body>
+    <section id="products">
+        <i class="fi fi-rr-angle-small-right arrow1 right"></i>
+        <div class="carousel">
+        <div class="product-card">
+        <img src="/watch/pro1.webp" alt="">
+        <div class="product-title">ساعت کلاسیک</div>
+        <div class="product-price">2,800,000 تومان</div>
+        <button class="add-btn">افزودن به سبد</button>
+      </div>
+        <div class="product-card">
+        <img src="/watch/pro11.webp" alt="">
+        <div class="product-title">ساعت لوکس مشکی</div>
+        <div class="product-price">5,000,000 تومان</div>
+        <button class="add-btn">افزودن به سبد</button>
+      </div>
+        <div class="product-card">
+        <img src="/watch/pro3.webp" alt="">
+        <div class="product-title">ساعت زنانه رزگلد</div>
+        <div class="product-price">3,000,000 تومان</div>
+        <button class="add-btn">افزودن به سبد</button>
+      </div>
+      <div class="product-card">
+        <img src="/watch/pro8.webp" alt="">
+        <div class="product-title">ساعت چرمی</div>
+        <div class="product-price">1,950,000 تومان</div>
+        <button class="add-btn">افزودن به سبد</button>
+      </div>
+      <div class="product-card">
+        <img src="/watch/pro12.png" alt="">
+        <div class="product-title">ساعت اسپرت</div>
+        <div class="product-price">2,200,000 تومان</div>
+        <button class="add-btn">افزودن به سبد</button>
+      </div>
+        <div class="product-card">
+        <img src="/watch/pro9.webp" alt="">
+        <div class="product-title">ساعت استیل</div>
+        <div class="product-price">2,900,000 تومان</div>
+        <button class="add-btn">افزودن به سبد</button>
+      </div>
+        </div>
+        <i class="fi fi-rr-angle-small-left arrow1 left"></i>
+    </section>
+    
+<script src="/java script/Carousel.js"></script>
+</body>
+</html>

@@ -1,0 +1,61 @@
+.cart{
+    direction: rtl;
+    border:2px solid #ededed;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top:100px;
+    border-radius: 10px;
+    width:300px;
+    height: 350px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items:center;
+    font-family: 'vazir', sans-serif;
+    transition: all 0.5s;
+}
+.laptop{
+    width: 200px;
+    height: 200px;
+}
+.name{
+    font-family: 'vazir', sans-serif;
+    font-size:17px;
+    font-weight: 600;
+    display: inline;
+    padding: 0px;
+    position: relative;
+    bottom: 30px;
+}
+.price{
+    display: flex;
+    flex-direction: row;
+    width: 80%;
+    height: auto;
+    justify-content: space-between;
+    align-items:center;
+    /*border:1px solid black;*/
+}
+.product-price{
+    font-size:15px;
+    font-weight: 600;
+}
+.add-to-cart{
+    padding:10px;
+    padding-left:13px;
+    padding-right:13px;
+    border:none;
+    border-radius:5px;
+    background-color:#7965C1;
+}
+i{
+    color:white;
+    font-size:18px;
+}
+.cart:hover{
+    transform: translate(0,-10px);
+    border-color: #7965C1;
+    .add-to-cart{
+        background-color: #E3D095;
+    }
+}

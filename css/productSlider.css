@@ -1,0 +1,79 @@
+body{
+    font-family: 'vazir',serif;
+}
+.main{
+    display: flex;
+    justify-content: center;
+    /*border: 1px solid black;*/
+    padding: 1.5rem;
+    gap: 1rem;
+    margin-top: 8rem;
+}
+.laptop{
+    width: 12rem;
+    object-fit: cover;
+}
+.title-product{
+    font-size: 1rem;
+}
+.product{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /*border: 1px solid black;*/
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.116);
+    gap: 0.5rem;
+    padding: 1.5rem;
+    cursor: pointer;
+    border-radius: 10px;
+    transition: all 0.3s;
+}
+.holder-price{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    /*border: 1px solid black;*/
+    padding: 0.5rem;
+    width: 100%;
+}
+.price{
+    font-size: 0.9rem;
+    font-weight: 500;
+}
+.product-ic{
+    font-size: 1.1rem;
+    background-color: blueviolet;
+    padding: 1rem;
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 0.8rem;
+    height: 0.8rem;
+}
+.product:hover{
+    transform: translateY(10px);
+    .product-ic{
+        background-color: blue;
+    }
+}
+button{
+    height: auto;
+    align-self: center;
+    padding: 0.5rem;
+    border-radius: 5px;
+    background-color: black;
+    border: none;
+    transition: all 0.3s;
+}
+.arrow{
+    color: white;
+    font-size: 1rem;
+}
+button:hover{
+    background-color: blue;
+}
+
+
+
