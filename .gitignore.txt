@@ -1,0 +1,6 @@
+brands/
+watch/
+svg/
+product/
+picture/
+bootstrap/
