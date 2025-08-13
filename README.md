@@ -14,5 +14,5 @@
 پروژه هفتم:http://127.0.0.1:5500/html/design2.html
 پروژه هشتم:http://127.0.0.1:5500/html/login%20form.html
 پروژه نهم:http://127.0.0.1:5500/html/slider.html
-AAAAAAA
+
 
