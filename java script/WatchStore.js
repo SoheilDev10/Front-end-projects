@@ -220,7 +220,7 @@ const Second=document.querySelector(".second");
 const Minute=document.querySelector(".minute");
 const Hours=document.querySelector(".hours");
 const Day=document.querySelector(".day");
-const targetDay=new Date("August 15 2025 00:00:00").getTime();
+const targetDay=new Date("August 22 2025 00:00:00").getTime();
 function Timer()
 {
     const currentDay=new Date().getTime();
