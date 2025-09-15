@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Type Speed</title>
+    <style>
+        *{
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            box-sizing: border-box;
+        }
+        .type{
+            display: flex;
+            margin-top: 2rem;
+            padding: 1rem 6.5rem 1rem 6.5rem;
+            background-color: tomato;
+            height: 7rem;
+        }
+        .type .texts{
+            color: white;
+            font-size: 1.5rem;
+        }
+        .typeSpeed{
+            display: flex;
+            flex-direction: column;
+            margin-top: 1rem;
+            margin-right: auto;
+            margin-left: auto;
+            border: 2px solid black;
+            border-radius: 10px;
+            padding: 1.5rem;
+            width: 50%;
+        }
+        .second,.minute{
+            font-size: 2em;
+        }
+        .time{
+            display: flex;
+            margin-top: 1rem;
+            gap: 1rem;
+        }
+        textarea{
+            font-size: 1.25rem;
+            height: 10rem;
+            padding: 0.7rem;
+        }
+    </style>
+</head>
+<body>
+    <div class="type">
+        <p class="texts"></p>
+    </div>
+    <div class="typeSpeed">
+        <textarea id="write" placeholder="Write...""></textarea>
+        <div class="time"><p class="minute">00</p><p class="second">00</p></div>
+    </div>
+
+    
+    <script src="/java script/typeSpeed.js"></script>
+</body>
+</html>
