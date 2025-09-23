@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather</title>
+    <link rel="stylesheet" href="/bootstrap/bootstrap-5.3.7-dist/css/bootstrap-reboot.css">
+    <link rel="stylesheet" href="/bootstrap/bootstrap-5.3.7-dist/css/bootstrap.min.css">
+</head>
+
+<style>
+    body {
+        background: linear-gradient(85deg, #211C84, #4D55CC);
+    }
+
+    * {
+        box-sizing: border-box;
+        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    }
+
+    .weather {
+        width: 80%;
+        border-radius: 10px;
+        height: 40rem;
+        backdrop-filter: blur(30px);
+        -webkit-backdrop-filter: blur(30px);
+        background-color: rgba(255, 255, 255, 0.140);
+    }
+
+    .weather img {
+        width: 30%;
+        object-fit: cover;
+        border-radius: 10px 0 0 10px;
+    }
+
+    .info {
+        width: 70%;
+        padding: 3rem 1.5rem 3rem 1.5rem;
+    }
+</style>
+
+<body>
+
+    <div class="weather d-flex ms-auto me-auto mt-5">
+        <img src="/picture/bg3.jpg" alt="weather">
+        <div class="info d-flex flex-column align-items-center justify-content-evenly">
+            <div class="enter d-flex gap-3 w-100 pb-5">
+                <input type="submit" class="btn btn-primary submit btn-lg" value="Send">
+                <input type="text" class="form-control city-name fs-5" placeholder="Enter name of city...">
+            </div>
+            <div class="info-text d-flex flex-column gap-3">
+                <p class="output fs-3 text-white" id="city">city</p>
+                <p class="output fs-3 text-white" id="desc">description</p>
+                <p class="output fs-3 text-white" id="temp">temp</p>
+                <p class="output fs-3 text-white" id="wind">wind</p>
+            </div>
+        </div>
+    </div>
+    <script src="/bootstrap-5.3.7-dist/js/bootstrap.bundle.js"></script>
+    <script src="/java script/weather.js"></script>
+</body>
+
+</html>
