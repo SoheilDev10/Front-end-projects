@@ -85,7 +85,7 @@ body{
 }
 .my-items{
     border-bottom: var(--list-border);
-    cursor: pointer;
+    /*cursor: pointer;*/
 }
 .added-text{
     color: var(--text-color);
@@ -109,6 +109,8 @@ body{
     cursor: pointer;
     color: var(--text-color);
     opacity: 0;
+    background: transparent;
+    border: none;
 }
 .delete:hover{
     color: red;
@@ -141,4 +143,7 @@ body{
 .switch-theme{
     background: transparent;
     border: none;
+}
+.list .my-items.dragging{
+    opacity: 0.5;
 }
