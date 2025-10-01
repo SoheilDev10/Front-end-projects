@@ -144,6 +144,14 @@ body{
     background: transparent;
     border: none;
 }
-.list .my-items.dragging{
+.list .my-items .dragging{
     opacity: 0.5;
+}
+.fall{
+    display: none;
+}
+.complated{
+    .added-text{
+        color: greenyellow;
+    }
 }
