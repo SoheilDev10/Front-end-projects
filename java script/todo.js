@@ -79,6 +79,7 @@ function TodoList() {
         }
     });
     sendByEnter();
+    //delete complated items
     deleteAll.addEventListener('click', () => {
         const items = [...document.querySelectorAll(".my-items")];
         const compArray = [];
