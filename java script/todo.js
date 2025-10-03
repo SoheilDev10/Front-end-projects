@@ -8,7 +8,8 @@ const addListBtn = document.querySelector(".addlist");
 const showError = document.querySelector(".show-error ");
 const theList = document.querySelector(".list");
 const countItems = document.querySelector(".count");
-let count = 0;
+const deleteAll = document.querySelector(".delete-all");
+const filter = document.querySelector(".filters");
 
 //Create main function
 function TodoList() {
@@ -50,7 +51,6 @@ function TodoList() {
         }
     });
     maketodos(JSON.parse(localStorage.getItem("todos")));
-    itemsOfApp();
     //Add event for button add
     addListBtn.addEventListener('click', () => {
         const myItem = inputText.value.trim();
@@ -79,6 +79,48 @@ function TodoList() {
         }
     });
     sendByEnter();
+    deleteAll.addEventListener('click', () => {
+        const items = [...document.querySelectorAll(".my-items")];
+        const compArray = [];
+        items.forEach(item => {
+            if (item.classList.contains("complated")) {
+                item.remove();
+                const compIndex = items.indexOf(item);
+                compArray.push(compIndex);
+            }
+        })
+        deleteChecked(compArray);
+    });
+    filter.addEventListener('click', (e) => {
+        const id = e.target.id;
+        if (id) {
+            document.querySelector(".on").classList.remove("on");
+            document.getElementById(id).classList.add("on");
+        }
+    });
+    filter.addEventListener('click', (e) => {
+        const items = document.querySelectorAll(".my-items");
+        if (e.target.id == "act") {
+            items.forEach(item => {
+                if (item.classList.contains("complated"))
+                    item.classList.add("d-none");
+                else
+                    item.classList.remove("d-none");
+            })
+        } else if (e.target.id == "comp") {
+            items.forEach(item => {
+                if (!item.classList.contains("complated"))
+                    item.classList.toggle("d-none");
+                else
+                    item.classList.remove("d-none");
+            })
+        } else if (e.target.id == "all") {
+            items.forEach(item => {
+                if (item.classList.contains("my-items"))
+                    item.classList.remove("d-none");
+            })
+        }
+    });
 }
 
 //Create items
@@ -123,7 +165,6 @@ function maketodos(todoArray) {
             const indexRemove = items.indexOf(removedItem);
             removedItem.classList.add("fall");
             removeItem(indexRemove);
-            count--;
         });
         //Check items
         inputCheck.addEventListener('click', () => {
@@ -132,17 +173,11 @@ function maketodos(todoArray) {
             const items = [...theList.querySelectorAll(".my-items")];
             const indexCheck = items.indexOf(checkedItem);
             containsItem(indexCheck, checked);
-            if (checked == true) {
-                newLi.classList.add("complated");
-                count--;
-                countItems.textContent = count;
-            } else {
-                newLi.classList.remove("complated");
-                count++;
-                countItems.textContent = count;
-            }
+            checked ? newLi.classList.add("complated") : newLi.classList.remove("complated");
+            countItems.textContent = document.querySelectorAll(".my-items:not(.complated)").length;
         });
     });
+    countItems.textContent = document.querySelectorAll(".my-items:not(.complated)").length;
 }
 
 //Add property to create items by enter button
@@ -165,14 +200,12 @@ function containsItem(index, isComplated) {
     localStorage.setItem("todos", JSON.stringify(todos));
 }
 
-function itemsOfApp() {
-    const items = [...document.querySelectorAll(".my-items")];
-    items.forEach(item => {
-        if (!item.classList.contains("complated"))
-            count++;
-        else
-            count--;
+function deleteChecked(indexes) {
+    const todos = JSON.parse(localStorage.getItem("todos"));
+    indexes.forEach(index => {
+        todos.splice(index,1);
     })
-    countItems.textContent = count;
+    localStorage.setItem("todos", JSON.stringify(todos));
 }
+
 document.addEventListener('DOMContentLoaded', TodoList);
