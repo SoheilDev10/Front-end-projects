@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Currency App</title>
+    <link rel="stylesheet" href="/bootstrap/bootstrap-5.3.7-dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/bootstrap/bootstrap-5.3.7-dist/css/bootstrap-reboot.css">
+    <link rel='stylesheet'
+        href='https://cdn-uicons.flaticon.com/3.0.0/uicons-regular-rounded/css/uicons-regular-rounded.css'>
+</head>
+<style>
+    * {
+        box-sizing: border-box;
+        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        color: white;
+    }
+
+    body {
+        background-image: url("/picture/419814460_2943c4d6-4875-46de-b60f-f52668c9ab15.jpg");
+        background-size: cover;
+        background-repeat: no-repeat;
+    }
+
+    .main {
+        background-color: rgba(255, 255, 255, 0.200);
+        width: 50%;
+        border-radius: 10px;
+        backdrop-filter: blur(15px);
+    }
+
+    .header img {
+        width: 3.5rem;
+    }
+
+    .header {
+        border-bottom: 1px solid white;
+        width: 100%;
+    }
+
+    .result {
+        border-bottom: 2px dashed white;
+    }
+
+    .populers img {
+        width: 3rem;
+    }
+</style>
+
+<body>
+
+    <div class="main d-flex flex-column p-5 align-items-center mt-4 mb-4 ms-auto me-auto">
+        <div class="header d-flex justify-content-center align-items-center gap-3 pb-3">
+            <img src="/picture/exchange.png" class="img-fluid">
+            <h3 class="fs-3 fw-bold">Currency App</h3>
+        </div>
+        <div class="body d-flex flex-column w-100 mt-4">
+            <label for="base" class="form-label fs-5">Base Currency</label>
+            <select name="base" id="base" class="form-select">
+                <option value="USD">USD</option>
+                <option value="EUR">EUR</option>
+                <option value="IQD">IQD</option>
+                <option value="TRY">TRY</option>
+                <option value="CHF">CHF</option>
+            </select>
+            <label for="target" class="form-label fs-5 mt-3">Target Currency</label>
+            <select name="target" id="target" class="form-select">
+                <option value="EUR">EUR</option>
+                <option value="USD">USD</option>
+                <option value="IRR">IRR</option>
+                <option value="IQD">IQD</option>
+                <option value="TRY">TRY</option>
+                <option value="CHF">CHF</option>
+            </select>
+            <div class="d-flex flex-column convert w-100 mt-5 align-items-center">
+                <div class="d-flex result w-100 justify-content-center pb-3">
+                    <h3 class="fs-4 fw-bold"><span class="text-primary">Conversion</span> Result</h3>
+                </div>
+                <div class="show d-flex justify-content-center p-2 gap-2 mt-4">
+                    <p class="amount-base fs-5 text-danger">1</p>
+                    <p class="unit-base fs-5">USD</p>
+                    <span class="fs-5">=</span>
+                    <p class="amount-target fs-5 text-primary">00</p>
+                    <p class="unit-target fs-5">EUR</p>
+                </div>
+            </div>
+            <div class="populers d-flex flex-column w-100">
+                <div class="d-flex justify-content-center align-items-center gap-3 pb-4">
+                    <img src="/picture/analytics.png" class="img-fluid">
+                    <h3 class="populer-text fs-4 fw-bold">Populer Rates:</h3>
+                </div>
+                <div class="show-pop fs-5 d-flex gap-3 justify-content-center">
+                    <p class="unit-base">USD</p>
+                    <span class="fs-5">=></span>
+                    <p class="populer-unit1">EUR</p>
+                    <p class="populer-amount1 text-primary">00</p>
+                </div>
+                <div class="show-pop fs-5 d-flex gap-3 justify-content-center">
+                    <p class="unit-base">USD</p>
+                    <span class="fs-5">=></span>
+                    <p class="populer-unit2">EUR</p>
+                    <p class="populer-amount2 text-primary">00</p>
+                </div>
+                <div class="show-pop fs-5 d-flex gap-3 justify-content-center">
+                    <p class="unit-base">USD</p>
+                    <span class="fs-5">=></span>
+                    <p class="populer-unit3">EUR</p>
+                    <p class="populer-amount3 text-primary">00</p>
+                </div>
+                <div class="show-pop fs-5 d-flex gap-3 justify-content-center">
+                    <p class="unit-base">USD</p>
+                    <span class="fs-5">=></span>
+                    <p class="populer-unit4">EUR</p>
+                    <p class="populer-amount4 text-primary">00</p>
+                </div>
+                <div class="show-pop fs-5 d-flex gap-3 justify-content-center">
+                    <p class="unit-base">USD</p>
+                    <span class="fs-5">=></span>
+                    <p class="populer-unit5">EUR</p>
+                    <p class="populer-amount5 text-primary">00</p>
+                </div>
+            </div>
+            <div class="convertTo d-flex justify-content-center w-100 mt-4">
+                <button class="btn-convert fs-5 btn btn-lg w-100 btn-primary" type="button"><i
+                        class="fi fi-rr-convert-shapes me-3 fs-5"></i>Convert</button>
+            </div>
+        </div>
+
+    </div>
+    <script src="/java script/currency.js"></script>
+</body>
+
+</html>
