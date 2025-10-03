@@ -92,6 +92,7 @@ function TodoList() {
         })
         deleteChecked(compArray);
     });
+    //Add filter options
     filter.addEventListener('click', (e) => {
         const id = e.target.id;
         if (id) {
