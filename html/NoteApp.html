@@ -10,13 +10,16 @@
     <link rel='stylesheet'
         href='https://cdn-uicons.flaticon.com/3.0.0/uicons-regular-rounded/css/uicons-regular-rounded.css'>
     <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/3.0.0/uicons-bold-rounded/css/uicons-bold-rounded.css'>
+    <link rel='stylesheet'
+        href='https://cdn-uicons.flaticon.com/3.0.0/uicons-regular-chubby/css/uicons-regular-chubby.css'>
     <link rel="stylesheet" href="/css/NoteApp.css">
     <title>Note App</title>
 </head>
 
 <body>
     <div class="divTheme d-flex ms-auto me-auto">
-        <button class="btn-theme pb-3" type="button"><i class="fi fi-rr-brightness theme"></i></button>
+        <button class="btn-theme pb-3" type="button"><img src="/picture/icon-sun.svg" alt="sun"
+                class="img-fluid theme"></button>
     </div>
     <section class="d-flex flex-column p-4 ms-auto me-auto" id="main">
         <div class="header d-flex justify-content-between w-100">
@@ -25,13 +28,6 @@
                 <h3 class="title">یاد داشت های من</h3>
             </div>
             <button class="add-note" type="button"><span>+ افزودن نوت</span></button>
-        </div>
-        <div class="info-note d-flex flex-column justify-content-center w-100 gap-3 pt-4">
-            <label for="title" class="form-label title">عنوان</label>
-            <input type="text" id="title" class="form-control form-control-lg" placeholder="عنوان...">
-            <label for="text" class="form-label text">یاد داشت</label>
-            <input type="text" class="form-control form-control-lg" id="text" placeholder="یاد داشت...">
-            <button class="save-note" type="button"><i class="fi fi-br-bookmark"></i>ذخیره نوت</button>
         </div>
         <ul class="notes d-flex flex-column gap-3 pt-4">
             <li class="items d-flex flex-column">
@@ -43,13 +39,37 @@
                                 class="fi fi-rr-file-edit"></i>ویرایش</button>
                     </div>
                     <div class="name-note d-flex gap-2">
-
+                        <i class="fi fi-rr-note"></i>
+                        <p class="count-note text-primary">نوت<span class="count">1:</span></p>
+                        <p class="title-note">انجام تکالیف</p>
                     </div>
+                </div>
+                <div class="div-text-notes d-flex align-items-center p-3 mt-3">
+                    <p class="text-notes">تمام تکالیف قبل از ساعت 10 شب باید تکمیل شود.</p>
+                </div>
+            </li>
+            <li class="items d-flex justify-content-between"></li>
+
+            <li class="items d-flex flex-column">
+                <div class="info-notes d-flex justify-content-between">
+                    <div class="change d-flex gap-2">
+                        <button class="change-btns d-flex align-items-center gap-2 bin"><i
+                                class="fi fi-rr-trash"></i>حذف</button>
+                        <button class="change-btns d-flex align-items-center gap-2 edit"><i
+                                class="fi fi-rr-file-edit"></i>ویرایش</button>
+                    </div>
+                    <div class="name-note d-flex gap-2">
+                        <i class="fi fi-rr-note"></i>
+                        <p class="count-note text-primary">نوت<span class="count">2:</span></p>
+                        <p class="title-note">تکمیل پروژه</p>
+                    </div>
+                </div>
+                <div class="div-text-notes d-flex align-items-center p-3 mt-3">
+                    <p class="text-notes">پروژه های برنامه نویسی تا قبل از روز سه شنبه کامل شود.</p>
                 </div>
             </li>
             <li class="items d-flex justify-content-between"></li>
         </ul>
-
     </section>
 
     <script src="/java script/NoteApp.js"></script>
