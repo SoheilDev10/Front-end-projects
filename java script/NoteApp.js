@@ -131,6 +131,7 @@ function makeItemsOfNotes(value) {
                 }
             })
         });
+        //add dragging option
         li.addEventListener('dragstart', () => {
             li.classList.add("dragging");
         });
