@@ -188,3 +188,13 @@ p{
 .dragging{
     opacity: 0.5;
 }
+
+@media(max-width:990px)
+{
+    #main{
+        width: 90%;
+    }
+    .divTheme{
+        width: 90%;
+    }
+}
