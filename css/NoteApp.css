@@ -179,9 +179,12 @@ p{
     background: transparent;
     width: 100%;
     border: none;
-    color: white;
+    color: var(--text-color-primary);
     font-size: 1.1rem;
 }
 .input-edit:focus{
     outline: none;
+}
+.dragging{
+    opacity: 0.5;
 }

@@ -75,6 +75,7 @@ function makeItemsOfNotes(value) {
     value.forEach(val => {
         const li = document.createElement("li");
         li.className = "items d-flex flex-column";
+        li.draggable = "true";
         li.innerHTML = `<div class="info-notes d-flex justify-content-between">
                     <div class="change d-flex gap-2">
                         <button class="change-btns d-flex align-items-center gap-2 bin"><i
@@ -121,13 +122,37 @@ function makeItemsOfNotes(value) {
                     inputEdit.addEventListener('keydown', (e) => {
                         if (e.key === "Enter") {
                             textNote.classList.remove("d-none");
-                            textNote.textContent = inputEdit.value.trim();
+                            const editText = textNote.textContent = inputEdit.value.trim();
                             inputEdit.remove();
                             selectLi.classList.remove("editing");
+                            editNote(indexEdit, editText);
                         }
                     });
                 }
             })
+        });
+        li.addEventListener('dragstart', () => {
+            li.classList.add("dragging");
+        });
+        li.addEventListener('dragend', () => {
+            li.classList.remove("dragging");
+        });
+        myNotes.addEventListener('dragover', (e) => {
+            e.preventDefault();
+            if (e.target.classList.contains("items") && !e.target.classList.contains("dragging")) {
+                const items = [...document.querySelectorAll(".items")];
+                const draggingItem = document.querySelector(".dragging");
+                const currentPos = items.indexOf(draggingItem);
+                const newPos = items.indexOf(e.target);
+                if (currentPos > newPos)
+                    myNotes.insertBefore(draggingItem, e.target);
+                else
+                    myNotes.insertBefore(draggingItem, e.target.nextSibling);
+                const notes = JSON.parse(localStorage.getItem("notes"));
+                const removed = notes.splice(currentPos, 1);
+                notes.splice(newPos, 0, removed[0]);
+                localStorage.setItem("notes", JSON.stringify(notes));
+            }
         });
     });
 }
@@ -138,9 +163,9 @@ function deleteNote(index) {
     localStorage.setItem("notes", JSON.stringify(notes));
 }
 
-function editNote(index) {
+function editNote(index, editText) {
     const notes = JSON.parse(localStorage.getItem("notes"));
-    notes.splice(index, 1);
+    notes[index].text = editText;
     localStorage.setItem("notes", JSON.stringify(notes));
 }
 
